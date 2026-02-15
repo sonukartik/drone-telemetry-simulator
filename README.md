@@ -56,7 +56,7 @@ Battery Warning: Visual indicators when battery is low (20%) or depleted (0%)
 
 
 ### Project Structure
-
+```
 drone-telemetry-simulator/
 ├── 📄 drone.pro                  # qmake project file
 ├── 📄 CMakeLists.txt             # CMake build file
@@ -71,4 +71,5 @@ drone-telemetry-simulator/
 ├── 📄 RandomWalkStrategy.h/cpp    # Random walk
 ├── 📄 CircularStrategy.h/cpp      # Circular behavior
 ├── 📄 Logger.h/cpp                # Singleton logger
-└── 📄 TelemetryData.h/cpp         # UI widget  
+└── 📄 TelemetryData.h/cpp         # UI widget
+```
