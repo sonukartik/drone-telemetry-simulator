@@ -31,19 +31,19 @@ A Qt-based drone telemetry simulation system demonstrating design patterns inclu
 
 ### Clone the repository:
 
-'''bash 
+```bash 
 git clone https://github.com/sonukartik/drone-telemetry-simulator.git
 cd drone-telemetry-simulator
-'''
+```
 
 ### Build with CMake
 
-'''bash
+```bash
 mkdir build && cd build
 cmake .. -DCMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 make -j4
 ./DroneTelemetry
-'''
+```
 
 ### Usage
 Select Flight Pattern: Use dropdown to choose between Hover, Random Walk, or Circular
