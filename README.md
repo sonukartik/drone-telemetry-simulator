@@ -32,13 +32,17 @@ A Qt-based drone telemetry simulation system demonstrating design patterns inclu
 ### Clone the repository:
 
 git clone https://github.com/sonukartik/drone-telemetry-simulator.git
+
 cd drone-telemetry-simulator
 
 ### Build with CMake
 
 mkdir build && cd build
+
 cmake .. -DCMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
+
 make -j4
+
 ./DroneTelemetry
 
 
