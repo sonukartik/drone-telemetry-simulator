@@ -30,11 +30,11 @@ A Qt-based drone telemetry simulation system demonstrating design patterns inclu
 ## Building the Project
 
 ### Clone the repository:
-```bash
-git clone https://github.com/YOUR_USERNAME/drone-telemetry-simulator.git
-cd drone-telemetry-simulator/
 
-## Build with CMake
+git clone https://github.com/sonukartik/drone-telemetry-simulator.git
+cd drone-telemetry-simulator
+
+### Build with CMake
 
 mkdir build && cd build
 cmake .. -DCMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
@@ -42,7 +42,7 @@ make -j4
 ./DroneTelemetry
 
 
-Usage
+### Usage
 Select Flight Pattern: Use dropdown to choose between Hover, Random Walk, or Circular
 
 Simulate Failure: Toggle failure mode to see GPS loss and faster battery drain
@@ -52,7 +52,7 @@ Monitor Telemetry: Watch real-time updates of all drone parameters
 Battery Warning: Visual indicators when battery is low (20%) or depleted (0%)
 
 
-Project Structure
+### Project Structure
 
 drone-telemetry-simulator/
 ├── 📄 drone.pro                  # qmake project file
