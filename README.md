@@ -2,6 +2,10 @@
 
 A Qt-based drone telemetry simulation system demonstrating design patterns including Factory, Strategy, and Singleton patterns.
 
+## Demo
+
+https://github.com/user-attachments/assets/54c7f712-d8c7-4941-9f2e-180c941c3f23
+
 ## Features
 
 - **Real-time Telemetry Display**: Live updates of drone position, altitude, heading, speed, battery, and GPS status
@@ -136,7 +140,5 @@ drone-telemetry-simulator/
 ├── 📄 Logger.h/cpp                # Singleton logger
 └── 📄 TelemetryData.h/cpp         # UI widget
 ```
-
-https://github.com/user-attachments/assets/54c7f712-d8c7-4941-9f2e-180c941c3f23
 
 
