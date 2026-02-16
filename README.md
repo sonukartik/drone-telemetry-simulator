@@ -136,3 +136,7 @@ drone-telemetry-simulator/
 ├── 📄 Logger.h/cpp                # Singleton logger
 └── 📄 TelemetryData.h/cpp         # UI widget
 ```
+
+https://github.com/user-attachments/assets/54c7f712-d8c7-4941-9f2e-180c941c3f23
+
+
