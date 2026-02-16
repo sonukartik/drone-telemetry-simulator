@@ -16,10 +16,40 @@ A Qt-based drone telemetry simulation system demonstrating design patterns inclu
 
 ## Design Patterns Used
 
-- **Factory Pattern**: `DroneFactory` creates different drone simulator instances
-- **Strategy Pattern**: `MovementStrategy` hierarchy for interchangeable flight behaviors
-- **Singleton Pattern**: `Logger` for centralized logging
-- **Observer Pattern**: Signals/slots for UI updates
+**Factory Pattern** - `DroneFactory`:
+Creates different drone simulator instances without exposing creation logic to the client. Makes it easy to add new drone types in the future.
+```cpp
+// Client doesn't need to know concrete classes
+IDroneSimulator* drone = DroneFactory::createDrone(NormalDrone);
+```
+
+**Strategy Pattern** - MovementStrategy Hierarchy : 
+Encapsulates different movement algorithms so they can be interchanged at runtime. Users can switch behaviors dynamically.
+```cpp
+// Strategies can be changed on the fly
+drone->setStrategy(new HoverStrategy());      // Stable hover
+drone->setStrategy(new RandomWalkStrategy()); // Random exploration
+drone->setStrategy(new CircularStrategy());   // Orbital flight
+```
+
+**Singleton Pattern** - Logger
+Ensures only one instance of the logger exists throughout the application, providing centralized logging from all components.
+```cpp
+// Access from anywhere in the code
+Logger::instance()->log("Drone created");
+Logger::instance()->error("Low battery!");
+```
+
+**Observer Pattern**: Signals/slots for UI updates
+Built into Qt framework. Telemetry data is observed by UI components which update automatically when data changes.
+```cpp
+// Worker emits signal when data is ready
+emit telemetryUpdated(packet);
+
+// UI automatically updates when signal is received
+connect(worker, &TelemetryWorker::telemetryUpdated, 
+        ui, &TelemetryData::updateUI);
+```
 
 ## Requirements
 
