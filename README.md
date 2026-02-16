@@ -84,6 +84,39 @@ Monitor Telemetry: Watch real-time updates of all drone parameters
 
 Battery Warning: Visual indicators when battery is low (20%) or depleted (0%)
 
+## Testing
+
+The project includes both unit tests and integration tests for all non-UI components.
+
+### Running Tests
+
+### Test Structure
+
+- **Unit Tests**: Test individual components in isolation
+  - TelemetryPacket data structure
+  - Logger singleton
+  - Movement strategies (Hover, Random Walk, Circular)
+  - TelemetryWorker battery and failure modes
+  - DroneFactory object creation
+
+- **Integration Tests**: Test components working together
+  - Factory → Drone → Worker workflow
+  - Strategy → Telemetry data flow
+  - Failure mode propagation through all layers
+  - Strategy changes during flight
+
+#### Using CMake
+
+```bash
+# From the build directory
+cd build
+
+# Build the tests
+make DroneTests
+
+# Run all tests
+./DroneTests
+```
 
 ### Project Structure
 ```
